@@ -1,0 +1,6 @@
+<h1>Edit Client<h1>
+
+<%= render partial: "form", locals: {url: clientinfo_path(@clientinfo), method: :patch} %>
+
+
+<%= link_to 'List Clients', clientinfo_index_path %>

@@ -1,0 +1,22 @@
+<h1>Listing Client Information<h1>
+
+<%= link_to 'New Client', new_clientinfo_path %>
+
+<table>
+  <tr>
+    <th>Title</th>
+    <th>Textx</th>
+  </tr>
+  
+  <% @clientinfo.each do |clientinfo| %>
+    <tr>
+      <td><%= clientinfo.title %></td>
+      <td><%= clientinfo.text %></td>
+      <td><%= link_to 'Show', clientinfo_path(clientinfo) %></td>
+      <td><%= link_to 'Edit', edit_clientinfo_path(clientinfo) %></td>
+      <td><%= link_to 'Destroy', clientinfo_path(clientinfo),
+               method: :delete,
+               data: { confirm: 'Are you sure?' } %></td>
+    </tr>
+  <% end %>
+</table>

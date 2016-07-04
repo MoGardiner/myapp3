@@ -1,0 +1,15 @@
+<h1>Welcome</h1>
+
+<p>
+  <%= link_to 'My Clients', controller: 'clientinfo' %>
+<p>
+
+<p>
+  <%= link_to 'New Client', new_clientinfo_path %>
+  <%= form_for :clientinfo, url: clientinfo_index_path do |f| %>
+<p>
+
+<% end %>
+
+<%= link_to 'Back', clientinfo_index_path %>
+

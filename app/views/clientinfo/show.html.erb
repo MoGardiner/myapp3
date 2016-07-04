@@ -1,0 +1,42 @@
+<h1>Show Client Info<h1>
+
+<p>
+  <strong>Title:</strong>
+  <%= @clientinfo.title %>
+</p>
+
+<p>
+  <strong>Text:</strong>
+  <%= @clientinfo.text %>
+</p>
+
+<h2>Business Events</h2>
+<% @clientinfo.business_events.each do |business_event| %>
+  <p>
+    <strong>Event:</strong>
+    <%= business_event.event %>
+  </p>
+  <p>
+    <strong>Shares:</strong>
+    <%= business_event.shares %>
+  </p>
+
+<% end %>
+
+<h2>Add a Business Event<h2>
+<%= form_for([@clientinfo, @clientinfo.business_events.build]) do |f| %>
+  <p>
+    <%= f.label :event %><br>
+    <%= f.text_field :event %>
+  </p>
+    <%= f.label :shares %><br>
+    <%= f.text_field :shares %>
+  </p>
+  <p>
+    <%= f.submit %>
+  </p>
+<% end %>
+
+
+<%= link_to 'Edit', edit_clientinfo_path(@clientinfo) %>  |
+<%= link_to 'Back', clientinfo_index_path %>

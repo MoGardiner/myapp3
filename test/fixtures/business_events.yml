@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  event: MyString
+  shares: 1.5
+  clientinfo_id: 
+
+two:
+  event: MyString
+  shares: 1.5
+  clientinfo_id: 
